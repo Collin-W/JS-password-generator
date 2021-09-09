@@ -1,6 +1,6 @@
 // Different vars
-var passLength
-var randomPass
+var passLength;
+var passResult;
 
 // A blank array and blank string one will be used and other deleted
 var blankArray = [];
@@ -42,9 +42,8 @@ function charSet1() {
    var upperCaseChar = confirm("Would you like uppercase characters?");
   if (upperCaseChar) { 
     alert("Uppercase characters added!");
-    upperCaseChar = "ABC";
     // added to blank array
-    blankString = upperCaseChar + blankString;
+    blankString += "ABC";
     console.log(blankString);
 
 
@@ -63,9 +62,8 @@ function charSet2() {
   var lowerCaseChar = confirm("Would you like lowercase characters?");
   if (lowerCaseChar) {
     alert("Lowercase characters added!");
-    lowerCaseChar = "abc";
     // added to blank array
-    blankString = lowerCaseChar + blankString;
+    blankString += "abc";
     console.log(blankString);
 
 
@@ -84,9 +82,8 @@ function charSet3() {
   var numberChar = confirm("Would you like numbers?");
   if (numberChar) {
     alert("Numbers added!");
-    numberChar = "123";
     // added to blank array
-    blankString = numberChar + blankString;
+    blankString += "123";
     console.log(blankString);
 
 
@@ -105,9 +102,8 @@ function charSet4() {
   var specialChar = confirm("Would you like special characters?");
   if (specialChar) {
     alert("Special characters added!");
-    specialChar = "!@#";
     // added to blank array
-    blankString = specialChar + blankString;
+    blankString += "!@#";
     console.log(blankString);
 
 
@@ -149,6 +145,18 @@ function createPass() {
     
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
