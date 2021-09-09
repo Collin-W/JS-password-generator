@@ -1,6 +1,6 @@
 // Different vars
 var passLength;
-var passResult;
+var passResult = "";
 
 // A blank array and blank string one will be used and other deleted
 var blankArray = [];
@@ -131,18 +131,19 @@ function validateCharSets() {
 
 function createPass() {
 
-  var passResult = "";
-  var blankStringLength = blankString.lenght;
+// my error was mispelling length
+  var blankStringLength = blankString.length;
  
   for(i = 0; i < passLength; i++) {
 
-    var randomchars = Math.floor(Math.random() * blankStringLength); 
-    console.log("random var: " + randomchars);
+    var randomChars = Math.floor(Math.random() * blankStringLength); 
+    console.log("random var: " + randomChars);
 
-    passResult += blankString[randomchars];
+    passResult += blankString[randomChars];
+
     console.log("var passResults: " + passResult);
 
-    
+    alert("Your new password is " + passResult);
   }
 }
 
