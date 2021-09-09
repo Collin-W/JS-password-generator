@@ -1,5 +1,6 @@
 # Password Generator Starter Code
-# test
+
+Link: https://collin-w.github.io/JS-password-generator/
 
 
 AS AN employee with access to sensitive data
