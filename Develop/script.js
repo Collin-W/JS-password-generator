@@ -43,7 +43,7 @@ function charSet1() {
   if (upperCaseChar) { 
     alert("Uppercase characters added!");
     // added to blank array
-    blankString += "ABC";
+    blankString += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     console.log(blankString);
 
 
@@ -63,7 +63,7 @@ function charSet2() {
   if (lowerCaseChar) {
     alert("Lowercase characters added!");
     // added to blank array
-    blankString += "abc";
+    blankString += "abcdefghijklmnopqrstuvwxyz";
     console.log(blankString);
 
 
@@ -83,7 +83,7 @@ function charSet3() {
   if (numberChar) {
     alert("Numbers added!");
     // added to blank array
-    blankString += "123";
+    blankString += "0123456789";
     console.log(blankString);
 
 
@@ -103,7 +103,7 @@ function charSet4() {
   if (specialChar) {
     alert("Special characters added!");
     // added to blank array
-    blankString += "!@#";
+    blankString += "!@#$%^&*()+=-_~|?.,<>";
     console.log(blankString);
 
 
@@ -143,21 +143,11 @@ function createPass() {
 
     console.log("var passResults: " + passResult);
 
+    if (passLength == passResult.length) {
     alert("Your new password is " + passResult);
+    }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -178,13 +168,3 @@ generateBtn.addEventListener("click", writePassword1);
 
 
 
-// Notes:
-
-// not sure if this for loop has a correct begining but can the random function really be in a condition?
-  //for(var i = Math.floor(Math.random() + 1); i < passLength; i++);{
-  //for(var blankString = Math.floor(Math.random() + 1); blankString < passLength; blankString++); {
- 
-  //
-// Take my blankString and send it though a for loop that only adds characters equal to passLength
-// -pass the result of the random for loop into an alert that gives the password
-//
