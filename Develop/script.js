@@ -9,7 +9,7 @@ var createNewPass = window.confirm("Welcome to the password generator. Would you
   if(createNewPass) {
       choosePassLength();
     } else {
-      window.alert("Goodbye")
+      window.alert("Goodbye.")
   }
 };
 
