@@ -1,24 +1,19 @@
-// Different vars
+// Global var hotspring
 var passLength;
 var passResult = "";
-
-// A blank array and blank string one will be used and other deleted
-var blankArray = [];
 var blankString = "";
 
 // Might need to change first function name to connect it to the button
 function writePassword1() {
 var createNewPass = window.confirm("Welcome to the password generator. Would you like to create a new password?");
-if(createNewPass) {
-  choosePassLength();
-} else {
-  window.alert("Goodbye")
-}
-}
-
+  if(createNewPass) {
+      choosePassLength();
+    } else {
+      window.alert("Goodbye")
+  }
+};
 
 // Password length option
-// TODO: Some way need to make sure my passLength value can influence the blank array or string that will hold the characters
 function choosePassLength(){
 
   passLength = window.prompt("Please enter a number 8-128, to choose how many characters you want in your password");
@@ -33,8 +28,7 @@ function choosePassLength(){
     alert("You must enter a number between 8 and 128. Not " + passLength + " try again.");
     return choosePassLength();
   }
-}
-
+};
 
 // Set 1 has uppercase letters
 function charSet1() {
@@ -45,16 +39,13 @@ function charSet1() {
     // added to blank array
     blankString += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     console.log(blankString);
-
-
-    // go to next function without losing upper char data
     charSet2();
 
   } else {
     alert("No uppercase characters will be present.");
     charSet2();
   }
-}
+};
 
 // Set 2 has lowercase letters
 function charSet2() {
@@ -65,16 +56,13 @@ function charSet2() {
     // added to blank array
     blankString += "abcdefghijklmnopqrstuvwxyz";
     console.log(blankString);
-
-
-    // go to next function without losing lower char data
     charSet3();
 
   } else {
     alert("No lowercase characters will be present.")
     charSet3();
   }
-}
+};
 
 // Set 3 has numbers letters
 function charSet3() {
@@ -94,7 +82,7 @@ function charSet3() {
     alert("No numbers will be present.")
     charSet4();
   }
-}
+};
 
 // Set 4 has lowercase letters
 function charSet4() {
@@ -105,18 +93,13 @@ function charSet4() {
     // added to blank array
     blankString += "!@#$%^&*()+=-_~|?.,<>";
     console.log(blankString);
-
-
-    // go to next function without losing lower char data
     validateCharSets();
 
   } else {
     alert("No special characters will be present.")
     validateCharSets();
   }
-}
-
-
+};
 
 // Validate users can't select no sets, must have at least 1 set
 function validateCharSets() {
@@ -127,16 +110,12 @@ function validateCharSets() {
     alert("Time to create your password!");
     createPass();
   }
-}
+};
 
 function createPass() {
-
-// my error was mispelling length
-  var blankStringLength = blankString.length;
- 
   for(i = 0; i < passLength; i++) {
 
-    var randomChars = Math.floor(Math.random() * blankStringLength); 
+    var randomChars = Math.floor(Math.random() * blankString.length); 
     console.log("random var: " + randomChars);
 
     passResult += blankString[randomChars];
@@ -147,7 +126,7 @@ function createPass() {
     alert("Your new password is " + passResult);
     }
   }
-}
+};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -159,7 +138,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword1); 
