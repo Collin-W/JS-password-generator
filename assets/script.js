@@ -7,6 +7,8 @@ var blankString = "";
 function writePassword1() {
 var createNewPass = window.confirm("Welcome to the password generator. Would you like to create a new password?");
   if(createNewPass) {
+  
+    passResult = "";
       choosePassLength();
     } else {
       window.alert("Goodbye.")
