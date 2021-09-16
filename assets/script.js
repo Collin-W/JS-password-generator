@@ -7,9 +7,8 @@ var blankString = "";
 function writePassword1() {
 var createNewPass = window.confirm("Welcome to the password generator. Would you like to create a new password?");
   if(createNewPass) {
-  
     passResult = "";
-      choosePassLength();
+    choosePassLength();
     } else {
       window.alert("Goodbye.")
   }
@@ -18,7 +17,7 @@ var createNewPass = window.confirm("Welcome to the password generator. Would you
 // Password length option
 function choosePassLength(){
 
-  passLength = window.prompt("Please enter a number 8-128, to choose how many characters you want in your password");
+  passLength = window.prompt("Please enter a number 8-128, to choose how many characters you want in your password.");
   if (passLength >= 8 && passLength <= 128) {
     alert("Great, you have chosen " + passLength + " characters in your password.");
     //turn passLenght to an int
